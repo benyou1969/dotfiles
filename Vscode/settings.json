@@ -1,9 +1,8 @@
 {
       "workbench.colorTheme": "Material Theme",
-      "materialTheme.fixIconsRunning": false,
-      "workbench.iconTheme": "eq-material-theme-icons",
+      "workbench.iconTheme": "material-icon-theme",
       "atomKeymap.promptV3Features": true,
-      "files.autoSave": "onFocusChange",
+      "files.autoSave": "afterDelay",
       "workbench.startupEditor": "newUntitledFile",
       "editor.fontSize": 16,
       "editor.wordWrap": "on",
@@ -21,7 +20,9 @@
             "*.vue": "vue"
       },
       "breadcrumbs.enabled": true,
-      "window.zoomLevel": -1,
+      "window.zoomLevel": 1,
       "editor.formatOnPaste": true,
       "editor.formatOnSave": true,
+      "IoTWorkbench.ShownHelpPage": true,
+      "git.autofetch": true,
 }
