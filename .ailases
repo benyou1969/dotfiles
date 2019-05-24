@@ -1,3 +1,18 @@
+# Shortcuts
+alias r="rm -r"
+alias rr="rm -rf"
+alias documents="cd ~/Documents
+alias download="cd ~/Downloads"
+alias desktop="cd ~/Desktop"
+alias sites="cd ~/code"
+
+# Directory listing/traversal
+alias l="ls"
+alias ll="ls -lA"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
 # Git
 alias gs="git status"
 alias gl="git log"
@@ -10,17 +25,52 @@ alias zshconf="nano ~/.zshrc"
 alias omz="cd ~/.oh-my-zsh"
 alias com="git commit -s -a -m 'Empty' --allow-empty"
 alias repush="git pull --rebase && git push"
+alias commit-gpg="export GPG_TTY=$(tty)"
+
 # OS
 alias install="sudo dpkg -i"
 alias copy="xclip -sel clip <"
+
 # PHP & Laravel
-alias configlaravel="cp .env.example  .env && composer install && php artisan key:generate"
-"~/.aliases" 25L, 901C
+alias configlaravel="cp .env.example  .env ; composer install ; php artisan key:generate"
 alias test="vendor/bin/phpunit"
 alias art="php artisan"
 alias tinker="php artisan tinker"
 alias db="php artisan migrate:refresh --seed"
 alias launch="php artisan serve"
 alias auth="php artisan make:auth"
-alias git=hub
-alias commit-gpg="export GPG_TTY=$(tty)"
+
+# npm
+alias ni="npm install"
+alias nu="npm uninstall"
+alias nup="npm update"
+alias nri="rm -r node_modules && npm install"
+alias ncd="npm-check -su"
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+alias ipl="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
+
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# Hide/show all desktop icons (useful when presenting)
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+# Lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
+
+# valet
+alias vi="valet install"
+alias vu="valet uninstall"
+alias vf="valet forget"
+alias vp="valet path"
+alias vl="valet link"
+
+
