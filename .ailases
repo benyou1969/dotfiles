@@ -5,6 +5,9 @@ alias documents="cd ~/Documents
 alias download="cd ~/Downloads"
 alias desktop="cd ~/Desktop"
 alias sites="cd ~/code"
+alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
+alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
+alias c="clear"
 
 # Directory listing/traversal
 alias l="ls"
@@ -66,11 +69,15 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
+# PHP
+alias cfresh="rm -rf vendor/ composer.lock && composer i"
+
 # valet
 alias vi="valet install"
 alias vu="valet uninstall"
 alias vf="valet forget"
 alias vp="valet path"
 alias vl="valet link"
+alias install-valet="cd Code/ ; valet forget; valet uninstall ; valet install ; valet park"
 
 
