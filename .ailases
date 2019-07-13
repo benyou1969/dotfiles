@@ -29,6 +29,7 @@ alias omz="cd ~/.oh-my-zsh"
 alias com="git commit -s -a -m 'Empty' --allow-empty"
 alias repush="git pull --rebase && git push"
 alias commit-gpg="export GPG_TTY=$(tty)"
+alias count-commit="git rev-list --all --count\n"
 
 # OS
 alias install="sudo dpkg -i"
