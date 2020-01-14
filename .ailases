@@ -1,7 +1,7 @@
 # Shortcuts
 alias r="rm -r"
 alias rr="rm -rf"
-alias documents="cd ~/Documents
+alias documents="cd ~/Documents"
 alias download="cd ~/Downloads"
 alias desktop="cd ~/Desktop"
 alias sites="cd ~/code"
