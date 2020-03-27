@@ -80,3 +80,6 @@ alias vf="valet forget"
 alias vp="valet path"
 alias vl="valet link"
 alias install-valet="cd Code/ ; valet forget; valet uninstall ; valet install ; valet park"
+
+# Full stack
+cd backend && code . && cd .. && cd frontend && code .
