@@ -13,7 +13,7 @@ module.exports = {
 
         // font family with optional fallbacks
         fontFamily:
-            'Fira code,Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+            '"Fira Code", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
         // default font weight: 'normal' or 'bold'
         fontWeight: "normal",
@@ -22,7 +22,7 @@ module.exports = {
         fontWeightBold: "bold",
 
         // line height as a relative unit
-        lineHeight: 1.4,
+        lineHeight: 1.1,
 
         // letter spacing as a relative unit
         letterSpacing: 0,
@@ -45,9 +45,10 @@ module.exports = {
         // terminal background color
         // opacity is only supported on macOS
         backgroundColor: "rgb(17,26,34)",
+        // backgroundColor: "rgb(33,33,33)",
 
         // terminal selection color
-        selectionColor: "rgb(216, 233, 255)",
+        selectionColor: "rgba(216, 233, 255,0.3)",
 
         // border color (window, tabs)
         // borderColor: "rgb(216, 233, 255)",
@@ -105,7 +106,7 @@ module.exports = {
         //
         // PowerShell on Windows
         // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
-        shell: "",
+        shell: "/bin/zsh",
 
         // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
         // by default `['--login']` will be used
@@ -137,9 +138,15 @@ module.exports = {
 
         // Whether to use the WebGL renderer. Set it to false to use canvas-based
         // rendering (slower, but supports transparent backgrounds)
-        webGLRenderer: true
+        webGLRenderer: false,
 
         // for advanced config flags please refer to https://hyper.is/#cfg
+
+        // custom config
+        hyperTabs: {
+            closeAlign: "left",
+            tabIconsColored: true
+        }
     },
 
     // a list of plugins to fetch and install from npm
@@ -148,7 +155,17 @@ module.exports = {
     //   `hyperpower`
     //   `@company/project`
     //   `project#1.0.1`
-    plugins: [],
+    plugins: [
+        "hyper-font-ligatures",
+        "hyper-search",
+        "hyper-pane",
+        "hypercwd",
+        "hyperline",
+        "hyper-tabs-enhanced",
+        "hyperterm-safepaste",
+        "hyper-quit"
+        // "hyperborder"
+    ],
 
     // in development, you can create a directory under
     // `~/.hyper_plugins/local/` and include it here
