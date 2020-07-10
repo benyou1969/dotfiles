@@ -23,33 +23,13 @@ alias gcom="git checkout master"
 alias gc="git commit -m"
 alias gcs="git commit -s -S"
 alias nah="git checkout -- . && git reset --hard HEAD && git clean -df"
-alias wip="git add . && git commit -s -S -m 'Work In Progress' -m 'This is a trash commit to save changes'"
+alias wip="git add . && git commit  -m 'Work In Progress' -m 'This is a trash commit to save changes'"
 alias zshconf="nano ~/.zshrc"
 alias omz="cd ~/.oh-my-zsh"
 alias com="git commit -s -a -m 'Empty' --allow-empty"
 alias repush="git pull --rebase && git push"
 alias commit-gpg="export GPG_TTY=$(tty)"
 alias count-commit="git rev-list --all --count"
-
-# OS
-alias install="sudo dpkg -i"
-alias copy="xclip -sel clip <"
-
-# PHP & Laravel
-alias configlaravel="cp .env.example  .env ; composer install ; php artisan key:generate"
-alias test="vendor/bin/phpunit"
-alias art="php artisan"
-alias tinker="php artisan tinker"
-alias db="php artisan migrate:refresh --seed"
-alias launch="php artisan serve"
-alias auth="php artisan make:auth"
-
-# npm
-alias ni="npm install"
-alias nu="npm uninstall"
-alias nup="npm update"
-alias nri="rm -r node_modules && npm install"
-alias ncd="npm-check -su"
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -70,16 +50,9 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
-# PHP
-alias cfresh="rm -rf vendor/ composer.lock && composer i"
-
-# valet
-alias vi="valet install"
-alias vu="valet uninstall"
-alias vf="valet forget"
-alias vp="valet path"
-alias vl="valet link"
-alias install-valet="cd Code/ ; valet forget; valet uninstall ; valet install ; valet park"
 
 # Full stack
-cd backend && code . && cd .. && cd frontend && code .
+alias fullstack="cd backend && code . && cd .. && cd frontend && code . "
+alias weather="curl v2.wttr.in"
+
+alias node-clean="rm -rf node_modules  package-lock.json  yarn.lock"
