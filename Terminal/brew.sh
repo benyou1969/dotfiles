@@ -65,9 +65,13 @@ brew install --cask tableplus
 brew install --cask figma
 brew install --cask notion
 
-# install programming languages and frameworks
+# Install programming languages and frameworks
 brew install node
 brew install yarn
+
+# Install databases
+brew install postgres
+brew install redis
 
 # Remove outdated versions from the cellar.
 brew cleanup
